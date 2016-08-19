@@ -14,6 +14,7 @@
 		4AE2F2A11D67521F004E0F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2F29D1D67521F004E0F52 /* LaunchScreen.storyboard */; };
 		4AE2F2A21D67521F004E0F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2F29F1D67521F004E0F52 /* Main.storyboard */; };
 		69838F351D675A0900DBB8CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69838F341D675A0900DBB8CF /* HomeViewController.swift */; };
+		69838F371D67627100DBB8CF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69838F361D67627100DBB8CF /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4AE2F2A01D67521F004E0F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soneca-Bus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus.release.xcconfig"; sourceTree = "<group>"; };
 		69838F341D675A0900DBB8CF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		69838F361D67627100DBB8CF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soneca_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 				4AC3E5291D6754E10033881B /* Info.plist */,
 				4AE2F2971D6751D3004E0F52 /* AppDelegate.swift */,
 				69838F341D675A0900DBB8CF /* HomeViewController.swift */,
+				69838F361D67627100DBB8CF /* HomeTableViewCell.swift */,
 				4AE2F29D1D67521F004E0F52 /* LaunchScreen.storyboard */,
 				4AE2F29F1D67521F004E0F52 /* Main.storyboard */,
 				4AC3E52B1D67556C0033881B /* Assets.xcassets */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69838F371D67627100DBB8CF /* HomeTableViewCell.swift in Sources */,
 				69838F351D675A0900DBB8CF /* HomeViewController.swift in Sources */,
 				4AE2F2981D6751D3004E0F52 /* AppDelegate.swift in Sources */,
 			);
