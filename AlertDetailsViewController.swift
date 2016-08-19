@@ -21,6 +21,9 @@ class AlertDetailsViewController: UIViewController, GMSPanoramaViewDelegate {
 
 		self.title = "Detalhes da Parada"
         // Do any additional setup after loading the view.
+
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete", style: .Done, target: self, action: nil)
+		self.navigationItem.rightBarButtonItem?.tintColor = UIColor.redColor()
     }
 
 	override func viewDidLayoutSubviews() {
