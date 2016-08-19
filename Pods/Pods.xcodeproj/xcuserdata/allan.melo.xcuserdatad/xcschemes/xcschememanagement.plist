@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Launchpad.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Soneca-Bus.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Socket.IO-Client-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>later.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D7B504F3127DA5AF50215F8E7A4C0CE</key>
+		<key>19621702277C780E4EBB8A4FB34C30B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41175015FB7EA488ABCB491C70A67E1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4958077193C057409C85E61950169436</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4971A4BB5BEA96F505C460FDD948501</key>
 		<dict>
 			<key>primary</key>
 			<true/>

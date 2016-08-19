@@ -1,3 +1,21 @@
-PODFILE CHECKSUM: 8cedee7ee986f9317cd647dcef867650b2d93c2a
+PODS:
+  - Alamofire (3.4.1)
+  - later (0.1.0)
+  - Launchpad (0.3.0):
+    - later (= 0.1.0)
+    - Socket.IO-Client-Swift (= 4.1.6)
+  - Socket.IO-Client-Swift (4.1.6)
+
+DEPENDENCIES:
+  - Alamofire
+  - Launchpad
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  later: 956bed82bd77304be303a41b76909e47aa2881f9
+  Launchpad: c7f5d7aa6b19ad524143ae2a7c2a502c1b51c388
+  Socket.IO-Client-Swift: 5e8aa2961d1f32e5c0e104c00c9f192133a92d11
+
+PODFILE CHECKSUM: b3d3dbd45be8665f1b96c066218b2da7d8512f73
 
 COCOAPODS: 1.0.1

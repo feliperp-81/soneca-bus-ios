@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: UIViewController,
 	UITableViewDelegate, UITableViewDataSource {
 
 	@IBOutlet var tableView: UITableView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view, typically from a nib.
+
+		// marco zero -8.062845, -34.871091
+		// praça bv -8.132096, -34.900622
+		let coordinate = CLLocationCoordinate2DMake(-8.062845, -34.871091)
+		let radius = Double(1000)
+		let identifier = NSUUID().UUIDString
+		let note = "marco zero.... Uhuull"
+
+		addGeotification(coordinate, radius: radius, identifier: identifier,
+		                 note: note)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,7 +44,7 @@ class HomeViewController: UIViewController,
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int)
 		-> Int {
 
-		return 10
+		return getGeonotifications().count
 	}
 
 	func tableView(
@@ -42,7 +54,9 @@ class HomeViewController: UIViewController,
 		let cell = tableView.dequeueReusableCellWithIdentifier(_cellID)
 			as! HomeTableViewCell
 
-		cell.streetLabel.text = "Felipe"
+		let geonotification = getGeonotifications()[indexPath.row]
+
+		cell.streetLabel.text = geonotification.note
 
 		return cell
 	}

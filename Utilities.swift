@@ -51,3 +51,53 @@ func saveAllGeotifications(geonotifications: [GeoNotification]) {
 
 	NSUserDefaults.standardUserDefaults().synchronize()
 }
+
+func getGeonotifications() -> [GeoNotification] {
+	let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+	return delegate.geonotifications
+}
+func addGeonotification(geonotification: GeoNotification) {
+	let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+
+	delegate.addGeonotification(geonotification)
+}
+
+func addGeotification(
+	coordinate: CLLocationCoordinate2D, radius: Double, identifier: String,
+	note: String, eventType: EventType = EventType.OnEntry) {
+
+	let locationManager = getLocatioManager()
+	let clampedRadius =
+		min(locationManager.maximumRegionMonitoringDistance, radius)
+
+	let geotification = GeoNotification(
+		coordinate: coordinate, radius: clampedRadius,
+		identifier: identifier, note: note, eventType: eventType)
+
+	addGeonotification(geotification)
+
+	startMonitoringGeotification(geotification)
+}
+
+func startMonitoringGeotification(geonotification: GeoNotification) {
+	if (!CLLocationManager.isMonitoringAvailableForClass(CLCircularRegion)) {
+
+//		showSimpleAlertWithTitle(
+//			"Erro", message: "GPS não é suportado neste device!",
+//			viewController: self)
+
+		return
+	}
+	else if (CLLocationManager.authorizationStatus() != .AuthorizedAlways) {
+
+//		showSimpleAlertWithTitle(
+//			"Alerta",
+//			message: "Você precisa dar permissão de localização ao aplicativo",
+//			viewController: self)
+	}
+
+	let region = regionWithGeotification(geonotification)
+
+	getLocatioManager().startMonitoringForRegion(region)
+}

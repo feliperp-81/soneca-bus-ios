@@ -1,0 +1,6 @@
+framework module Launchpad {
+  umbrella header "Launchpad-umbrella.h"
+
+  export *
+  module * { export * }
+}

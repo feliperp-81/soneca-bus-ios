@@ -6,5 +6,7 @@ target 'Soneca-Bus' do
   use_frameworks!
 
   # Pods for Soneca-Bus
+  pod 'Launchpad'
+  pod 'Alamofire'
 
 end

@@ -110,5 +110,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,
 		return geonotifications
 	}
 
+	func addGeonotification(geonotification: GeoNotification) {
+		geonotifications.append(geonotification)
+	}
+
 }
 

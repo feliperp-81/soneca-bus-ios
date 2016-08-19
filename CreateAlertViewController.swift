@@ -21,6 +21,13 @@ class CreateAlertViewController: UIViewController {
 		_searchController = UISearchController(searchResultsController: nil)
 
 		searchContainerView.addSubview(_searchController!.searchBar)
+
+		if let location = getLocatioManager().location?.coordinate {
+			mapView.centerCoordinate = location
+			mapView.zoomEnabled = true
+
+			
+		}
     }
 
 	override func viewWillAppear(animated: Bool) {

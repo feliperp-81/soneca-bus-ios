@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		052EA3F776612D8F0A0BBAE3 /* Pods_Soneca_Bus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */; };
+		4A6516B81D67843300DC18FA /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6516B71D67843300DC18FA /* BusStop.swift */; };
 		4AAD7A611D67583E00ECFA20 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD7A601D67583E00ECFA20 /* Utilities.swift */; };
 		4AAD7A631D6759D800ECFA20 /* GeoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */; };
 		4AC3E52A1D6754E10033881B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC3E5291D6754E10033881B /* Info.plist */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		32E8C0DAE06580C4031A1CEF /* Pods-Soneca-Bus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soneca-Bus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus.debug.xcconfig"; sourceTree = "<group>"; };
 		4A582CCF1D674DE500F7A6D3 /* Soneca-Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soneca-Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6516B71D67843300DC18FA /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = SOURCE_ROOT; };
 		4AAD7A601D67583E00ECFA20 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = SOURCE_ROOT; };
 		4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoNotification.swift; sourceTree = SOURCE_ROOT; };
 		4AC3E5291D6754E10033881B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -92,6 +94,7 @@
 				4AC3E52B1D67556C0033881B /* Assets.xcassets */,
 				4AAD7A601D67583E00ECFA20 /* Utilities.swift */,
 				4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */,
+				4A6516B71D67843300DC18FA /* BusStop.swift */,
 			);
 			path = "Soneca-Bus";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				4AAD7A611D67583E00ECFA20 /* Utilities.swift in Sources */,
 				4AAD7A631D6759D800ECFA20 /* GeoNotification.swift in Sources */,
 				69838F371D67627100DBB8CF /* HomeTableViewCell.swift in Sources */,
+				4A6516B81D67843300DC18FA /* BusStop.swift in Sources */,
 				69838F391D6777CE00DBB8CF /* CreateAlertViewController.swift in Sources */,
 				69838F351D675A0900DBB8CF /* HomeViewController.swift in Sources */,
 				4AE2F2981D6751D3004E0F52 /* AppDelegate.swift in Sources */,
