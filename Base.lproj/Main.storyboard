@@ -164,25 +164,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-qW-FjE">
-                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-Wj-I4g">
-                                <rect key="frame" x="0.0" y="64" width="600" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="2sg-ph-Oou"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="u5Q-Wj-I4g" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" id="81v-fR-4vC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u5Q-Wj-I4g" secondAttribute="trailing" constant="-20" id="TRx-dD-oOF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aeX-qW-FjE" secondAttribute="trailing" constant="-20" id="eYU-yE-WOc"/>
                             <constraint firstItem="aeX-qW-FjE" firstAttribute="leading" secondItem="R6Z-bw-CxX" secondAttribute="leadingMargin" constant="-20" id="fI4-Yc-aAs"/>
-                            <constraint firstItem="aeX-qW-FjE" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" constant="44" id="gpg-Kh-PZC"/>
+                            <constraint firstItem="aeX-qW-FjE" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" id="gpg-Kh-PZC"/>
                             <constraint firstItem="nZx-HF-HgT" firstAttribute="top" secondItem="aeX-qW-FjE" secondAttribute="bottom" id="klz-iz-RXt"/>
-                            <constraint firstItem="u5Q-Wj-I4g" firstAttribute="leading" secondItem="R6Z-bw-CxX" secondAttribute="leadingMargin" constant="-20" id="og6-QO-Vp3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Criar Alerta" id="SVq-iW-2h7">
@@ -191,15 +181,37 @@
                                 <action selector="cancelButtonAction:" destination="vvB-rG-aDl" id="v4g-dL-8va"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="la2-Ww-EeQ">
+                            <connections>
+                                <segue destination="QDo-5Y-zHC" kind="show" id="g5q-WX-jTV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="aeX-qW-FjE" id="IwE-Ht-JUa"/>
-                        <outlet property="searchContainerView" destination="u5Q-Wj-I4g" id="hhu-db-BnT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3a-7n-0TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1554" y="-857"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="gt8-wy-XzU">
+            <objects>
+                <viewController id="QDo-5Y-zHC" customClass="SearchViewController" customModule="Soneca_Bus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zgo-Hd-KIB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hdv-6D-Q3r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M1L-52-ckn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="USY-fY-izO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2202" y="-857"/>
         </scene>
     </scenes>
 </document>
