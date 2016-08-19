@@ -20,13 +20,19 @@ class HomeViewController: UIViewController,
 
 		// marco zero -8.062845, -34.871091
 		// praça bv -8.132096, -34.900622
-		let coordinate = CLLocationCoordinate2DMake(-8.062845, -34.871091)
-		let radius = Double(1000)
-		let identifier = NSUUID().UUIDString
-		let note = "marco zero.... Uhuull"
+//		let coordinate = CLLocationCoordinate2DMake(-8.062845, -34.871091)
+//		let radius = Double(1000)
+//		let identifier = NSUUID().UUIDString
+//		let note = "marco zero.... Uhuull"
+//
+//		addGeotification(coordinate, radius: radius, identifier: identifier,
+//		                 note: note)
+	}
 
-		addGeotification(coordinate, radius: radius, identifier: identifier,
-		                 note: note)
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+
+		tableView.reloadData()
 	}
 
     override func didReceiveMemoryWarning() {

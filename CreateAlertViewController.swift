@@ -12,7 +12,7 @@ import Alamofire
 
 class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 
-	@IBOutlet weak var searchContainerView: UIView!
+//	@IBOutlet weak var searchContainerView: UIView!
 	@IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
 		_searchController = UISearchController(searchResultsController: nil)
 
-		searchContainerView.addSubview(_searchController!.searchBar)
+//		searchContainerView.addSubview(_searchController!.searchBar)
 
 		if let location = getLocatioManager().location?.coordinate {
 			mapView.centerCoordinate = location
@@ -44,7 +44,8 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 	}
 
 	func getPoints() {
-		busStops.removeAll()
+//		busStops.removeAll()
+//		mapView.removeAnnotations(mapView.annotations)
 
 		let header: [String : String] = ["host": "api.soneca.wedeploy.me"]
 		var parameters = [String: AnyObject]()
@@ -73,12 +74,22 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 					lon: lon, rua: street)
 
 				self.busStops.append(busStop)
+				self.addAnnotation(busStop)
 			}
 
 		}
 
 		print(busStops)
+	}
 
+	func addAnnotation(busStop: BusStop) {
+		let coodinate = CLLocationCoordinate2DMake(busStop.lat, busStop.lon)
+
+		let annotation =
+			BusStopAnnotation(coordinate: coodinate, title: busStop.rua,
+			                  busStop: busStop)
+		
+		mapView.addAnnotation(annotation)
 	}
 
 	override func viewWillAppear(animated: Bool) {
@@ -102,7 +113,39 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 		dismissViewControllerAnimated(true, completion: nil)
 	}
 
-	
+	func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation)
+		-> MKAnnotationView? {
+			
+		if (annotation is MKUserLocation) {
+			//if annotation is not an MKPointAnnotation (eg. MKUserLocation),
+			//return nil so map draws default view for it (eg. blue dot)...
+			return nil
+		}
+
+		let anView = MKPinAnnotationView(
+			annotation: annotation, reuseIdentifier: nil)
+
+		anView.canShowCallout = true
+			
+
+		return anView
+	}
+
+	func mapView(
+		mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+
+		let busStopAnnotation = view.annotation as! BusStopAnnotation
+
+		let coordinate = CLLocationCoordinate2DMake(
+			busStopAnnotation.busStop.lat, busStopAnnotation.busStop.lon)
+
+		let radius = Double(1000)
+		let identifier = NSUUID().UUIDString
+		let note = busStopAnnotation.busStop.rua
+
+		addGeotification(coordinate, radius: radius, identifier: identifier,
+		                 note: note)
+	}
 
 	private var _searchController:UISearchController?
 	private var busStops = [BusStop]()
