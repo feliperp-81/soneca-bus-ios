@@ -63,6 +63,7 @@ class HomeViewController: UIViewController,
 		let geonotification = getGeonotifications()[indexPath.row]
 
 		cell.streetLabel.text = geonotification.note
+			
 		setImage(geonotification.coordinate, completion: { image in
 			cell.mapImageView.image = image
 		})
@@ -78,7 +79,7 @@ class HomeViewController: UIViewController,
 
 		let snapshotter = MKMapSnapshotter(options: options)
 
-		snapshotter.startWithQueue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { snapshot, error in
+		snapshotter.startWithQueue(dispatch_get_main_queue()) { snapshot, error in
 			guard let snapshot = snapshot else {
 				print("Snapshot error: \(error)")
 				fatalError()
@@ -104,7 +105,7 @@ class HomeViewController: UIViewController,
 
 			let compositeImage = UIGraphicsGetImageFromCurrentImageContext()
 			UIGraphicsEndImageContext()
-
+			
 			completion(compositeImage)
 		}
 	}
