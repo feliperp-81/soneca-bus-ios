@@ -19,7 +19,7 @@ class AlertDetailsViewController: UIViewController, GMSPanoramaViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		self.title = "Detalhes da Parada"
+		title = "Detalhes do Alerta"
         // Do any additional setup after loading the view.
     }
 
