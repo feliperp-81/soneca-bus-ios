@@ -163,23 +163,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Procurar paradas de ônibus" translatesAutoresizingMaskIntoConstraints="NO" id="UIB-xe-a1e">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-qW-FjE">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-Wj-I4g">
+                                <rect key="frame" x="0.0" y="64" width="600" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2sg-ph-Oou"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UIB-xe-a1e" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" id="5l9-Va-gBs"/>
-                            <constraint firstItem="aeX-qW-FjE" firstAttribute="top" secondItem="UIB-xe-a1e" secondAttribute="bottom" id="F5a-rp-KGA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UIB-xe-a1e" secondAttribute="trailing" constant="-20" id="ImZ-fQ-Gek"/>
-                            <constraint firstItem="UIB-xe-a1e" firstAttribute="leading" secondItem="R6Z-bw-CxX" secondAttribute="leadingMargin" constant="-20" id="UNj-Do-UED"/>
+                            <constraint firstItem="u5Q-Wj-I4g" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" id="81v-fR-4vC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u5Q-Wj-I4g" secondAttribute="trailing" constant="-20" id="TRx-dD-oOF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aeX-qW-FjE" secondAttribute="trailing" constant="-20" id="eYU-yE-WOc"/>
                             <constraint firstItem="aeX-qW-FjE" firstAttribute="leading" secondItem="R6Z-bw-CxX" secondAttribute="leadingMargin" constant="-20" id="fI4-Yc-aAs"/>
+                            <constraint firstItem="aeX-qW-FjE" firstAttribute="top" secondItem="HaF-pY-kdW" secondAttribute="bottom" constant="44" id="gpg-Kh-PZC"/>
                             <constraint firstItem="nZx-HF-HgT" firstAttribute="top" secondItem="aeX-qW-FjE" secondAttribute="bottom" id="klz-iz-RXt"/>
+                            <constraint firstItem="u5Q-Wj-I4g" firstAttribute="leading" secondItem="R6Z-bw-CxX" secondAttribute="leadingMargin" constant="-20" id="og6-QO-Vp3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Criar Alerta" id="SVq-iW-2h7">
@@ -189,6 +192,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchContainerView" destination="u5Q-Wj-I4g" id="hhu-db-BnT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r3a-7n-0TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
