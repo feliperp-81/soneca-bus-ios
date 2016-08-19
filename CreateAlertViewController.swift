@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import MapKit
 
 class CreateAlertViewController: UIViewController {
 
 	@IBOutlet weak var searchContainerView: UIView!
+	@IBOutlet weak var mapView: MKMapView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

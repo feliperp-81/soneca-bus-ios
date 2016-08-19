@@ -193,6 +193,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapView" destination="aeX-qW-FjE" id="IwE-Ht-JUa"/>
                         <outlet property="searchContainerView" destination="u5Q-Wj-I4g" id="hhu-db-BnT"/>
                     </connections>
                 </viewController>
