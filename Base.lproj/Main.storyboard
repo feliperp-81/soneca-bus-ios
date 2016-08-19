@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1XJ-jZ-MqM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1XJ-jZ-MqM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,7 +25,7 @@
         <!--Alert Details View Controller-->
         <scene sceneID="zJX-fX-dJT">
             <objects>
-                <viewController id="ejy-nv-s5G" customClass="AlertDetailsViewController" customModule="Soneca_Bus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alertDetails" id="ejy-nv-s5G" customClass="AlertDetailsViewController" customModule="Soneca_Bus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pT7-Ql-X5y"/>
                         <viewControllerLayoutGuide type="bottom" id="af1-J2-hTZ"/>
@@ -33,14 +33,61 @@
                     <view key="view" contentMode="scaleToFill" id="1lI-Vz-gWk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-U3-2eK" userLabel="panoramaView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="SkP-Xj-LR8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-ju-lYg" userLabel="enderecoView">
+                                <rect key="frame" x="0.0" y="263" width="600" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-Vp-Xbf">
+                                        <rect key="frame" x="18" y="13" width="94" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mp6-iv-53E">
+                                        <rect key="frame" x="18" y="42" width="572" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="gTu-Vp-Xbf" firstAttribute="leading" secondItem="Dbf-ju-lYg" secondAttribute="leading" constant="18" id="4UL-AO-IAL"/>
+                                    <constraint firstAttribute="height" constant="140" id="SAS-zR-M3B"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mp6-iv-53E" secondAttribute="trailing" constant="10" id="Twy-cm-QfI"/>
+                                    <constraint firstItem="Mp6-iv-53E" firstAttribute="leading" secondItem="Dbf-ju-lYg" secondAttribute="leading" constant="18" id="aGA-oX-am7"/>
+                                    <constraint firstItem="gTu-Vp-Xbf" firstAttribute="top" secondItem="Dbf-ju-lYg" secondAttribute="top" constant="13" id="s71-QA-oWx"/>
+                                    <constraint firstItem="Mp6-iv-53E" firstAttribute="top" secondItem="gTu-Vp-Xbf" secondAttribute="bottom" constant="8" id="zC5-Gd-3Ol"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dbf-ju-lYg" firstAttribute="leading" secondItem="1lI-Vz-gWk" secondAttribute="leadingMargin" constant="-20" id="6zf-2Y-znU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0uG-U3-2eK" secondAttribute="trailing" constant="-20" id="DBA-Wt-RMp"/>
+                            <constraint firstItem="0uG-U3-2eK" firstAttribute="top" secondItem="pT7-Ql-X5y" secondAttribute="bottom" id="JrL-Mv-Wbr"/>
+                            <constraint firstItem="Dbf-ju-lYg" firstAttribute="top" secondItem="0uG-U3-2eK" secondAttribute="bottom" constant="-1" id="SK2-CG-OTt"/>
+                            <constraint firstItem="0uG-U3-2eK" firstAttribute="leading" secondItem="1lI-Vz-gWk" secondAttribute="leadingMargin" constant="-20" id="oMH-uE-Tb2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dbf-ju-lYg" secondAttribute="trailing" constant="-20" id="sKF-jG-Ww2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="labelEndereco" destination="Mp6-iv-53E" id="78f-Fg-1J2"/>
+                        <outlet property="panoramaContainer" destination="0uG-U3-2eK" id="TdR-1q-e6O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8V-fO-0by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="-1712"/>
         </scene>
-        <!--SonecaBuss-->
+        <!--SonecaBus-->
         <scene sceneID="97L-Rp-HW0">
             <objects>
                 <viewController id="x9Z-5V-arR" customClass="HomeViewController" customModule="Soneca_Bus" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +175,6 @@
                                             <outlet property="frequencyLabel" destination="0dG-4c-bW3" id="V0H-al-7Cd"/>
                                             <outlet property="mapImageView" destination="NgN-Xs-9zv" id="jpv-mC-pJu"/>
                                             <outlet property="streetLabel" destination="qfe-2u-4yv" id="1Ln-yM-0jN"/>
-                                            <segue destination="ejy-nv-s5G" kind="show" id="xHV-sa-0vA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -146,7 +192,7 @@
                             <constraint firstItem="jlb-U0-02K" firstAttribute="top" secondItem="xOc-3k-c4r" secondAttribute="bottom" id="uxZ-Bl-Wzc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SonecaBuss" id="RAO-QA-gxG">
+                    <navigationItem key="navigationItem" title="SonecaBus" id="RAO-QA-gxG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dhI-53-AwJ">
                             <connections>
                                 <segue destination="RNk-U2-Qnr" kind="presentation" id="b2d-nZ-PbY"/>

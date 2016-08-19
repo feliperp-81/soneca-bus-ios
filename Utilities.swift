@@ -12,7 +12,7 @@ import MapKit
 func showSimpleAlertWithTitle(
 	title: String, message: String, viewController: UIViewController) {
 	let alert = UIAlertController(
-		title: title, message: message, preferredStyle: .Alert)
+		title: title, message: "Sua parada está próxima, hora de acordar!!", preferredStyle: .Alert)
 
 //	"Sua parada está próxima, hora de acordar!!"
 	let action = UIAlertAction(title: "OK", style: .Cancel, handler: nil)

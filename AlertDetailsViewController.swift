@@ -7,14 +7,44 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class AlertDetailsViewController: UIViewController {
+class AlertDetailsViewController: UIViewController, GMSPanoramaViewDelegate {
 
+	var panoramaView: GMSPanoramaView?
+	var geonotification: GeoNotification?
+
+	@IBOutlet weak var panoramaContainer: UIView!
+	@IBOutlet weak var labelEndereco: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		self.title = "Detalhes da Parada"
         // Do any additional setup after loading the view.
     }
+
+	override func viewDidLayoutSubviews() {
+		let rect = CGRectMake(
+			0, 0, self.panoramaContainer.frame.size.width,
+			self.panoramaContainer.frame.size.height)
+
+		panoramaView?.frame = rect
+	}
+
+	override func viewWillAppear(animated: Bool) {
+
+		let rect = CGRectMake(
+			0, 0, self.panoramaContainer.frame.size.width,
+			self.panoramaContainer.frame.size.height)
+
+		if let notification = geonotification {
+			labelEndereco.text = notification.note
+
+			panoramaView = GMSPanoramaView(frame: rect)
+			panoramaView?.moveNearCoordinate(notification.coordinate)
+			panoramaContainer.addSubview(panoramaView!)
+		}
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

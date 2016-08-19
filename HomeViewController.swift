@@ -35,6 +35,20 @@ class HomeViewController: UIViewController,
 		tableView.reloadData()
 	}
 
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		print("aqui")
+
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		
+		let vc =
+			storyboard.instantiateViewControllerWithIdentifier("alertDetails") as! AlertDetailsViewController
+
+		vc.geonotification = getGeonotifications()[indexPath.row]
+
+		self.navigationController?.pushViewController(vc, animated: true)
+		
+	}
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,6 +84,15 @@ class HomeViewController: UIViewController,
 		return cell
 	}
 
+//	override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+//
+//		if segue!.identifier == "Details" {
+//			let viewController:ViewController = segue!.destinationViewController as ViewController
+//			let indexPath = self.tableView.indexPathForSelectedRow()
+//			viewController.pinCode = self.exams[indexPath.row]
+//		}
+//	}
+//
 	func setImage(coordinate: CLLocationCoordinate2D, completion: (UIImage) -> ()) {
 		let options = MKMapSnapshotOptions()
 		options.size = CGSizeMake(107, 107)

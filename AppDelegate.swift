@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import GoogleMaps
+
 
 let kSavedItemsKey = "savedItems"
 
@@ -23,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,
 		application: UIApplication,
 		didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)
 		-> Bool {
+
+		GMSServices.provideAPIKey("AIzaSyCpIejMQdzmGG8hRCkgrFB9GLdjluxOeho")
 
 		locationManager.delegate = self
 		locationManager.requestAlwaysAuthorization()
@@ -52,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,
 		}
 		else {
 			let notification = UILocalNotification()
-			notification.alertBody = notefromRegionIdentifier(region.identifier)
+			notification.alertBody = "Sua parada está próxima, hora de acordar!!"
 			notification.soundName = "Default";
 			application.presentLocalNotificationNow(
 				notification)
