@@ -9,39 +9,106 @@
 import UIKit
 import CoreLocation
 
+let kSavedItemsKey = "savedItems"
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,
+	CLLocationManagerDelegate {
 
 	var window: UIWindow?
 	let locationManager = CLLocationManager()
+	var geonotifications = [GeoNotification]()
 
-	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+	func application(
+		application: UIApplication,
+		didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?)
+		-> Bool {
+
+		locationManager.delegate = self
+		locationManager.requestAlwaysAuthorization()
+
+		geonotifications = getSavedGeonotifications()
+
+		let settings = UIUserNotificationSettings(
+			forTypes: [.Sound, .Alert, .Badge], categories: nil)
+
+		application.registerUserNotificationSettings(settings)
+		UIApplication.sharedApplication().cancelAllLocalNotifications()
+
 		return true
 	}
 
-	func applicationWillResignActive(application: UIApplication) {
-		// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-		// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+	func handleRegionEvent(region: CLRegion) {
+		let application = UIApplication.sharedApplication()
+		let state = application.applicationState
+
+		if  (state == .Active) {
+			if let message = notefromRegionIdentifier(region.identifier) {
+				if let viewController = window?.rootViewController {
+					showSimpleAlertWithTitle(
+						"", message: message, viewController: viewController)
+				}
+			}
+		}
+		else {
+			let notification = UILocalNotification()
+			notification.alertBody = notefromRegionIdentifier(region.identifier)
+			notification.soundName = "Default";
+			application.presentLocalNotificationNow(
+				notification)
+		}
 	}
 
-	func applicationDidEnterBackground(application: UIApplication) {
-		// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-		// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+	func locationManager(
+		manager: CLLocationManager, didEnterRegion region: CLRegion) {
+
+		if region is CLCircularRegion {
+			handleRegionEvent(region)
+		}
 	}
 
-	func applicationWillEnterForeground(application: UIApplication) {
-		// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+	func locationManager(
+		manager: CLLocationManager, didExitRegion region: CLRegion) {
+
+		if region is CLCircularRegion {
+			handleRegionEvent(region)
+		}
 	}
 
-	func applicationDidBecomeActive(application: UIApplication) {
-		// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	func notefromRegionIdentifier(identifier: String) -> String? {
+		let items = geonotifications.filter { (geonotification) -> Bool in
+			return geonotification.identifier == identifier
+		}
+
+		if (!items.isEmpty) {
+			return items.first?.note
+		}
+		
+		return nil
 	}
 
-	func applicationWillTerminate(application: UIApplication) {
-		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-	}
+	func getSavedGeonotifications() -> [GeoNotification] {
+		var geonotifications = [GeoNotification]()
 
+		if let savedItems =
+			NSUserDefaults.standardUserDefaults().arrayForKey(kSavedItemsKey) {
+
+			for savedItem in savedItems {
+				guard let savedItem = savedItem as? NSData else {
+					break
+				}
+
+				if let geonotification =
+					NSKeyedUnarchiver.unarchiveObjectWithData(savedItem)
+						as? GeoNotification {
+
+					geonotifications.append(geonotification)
+				}
+			}
+		}
+
+		return geonotifications
+	}
 
 }
 
