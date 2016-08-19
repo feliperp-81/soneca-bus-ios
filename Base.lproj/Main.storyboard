@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8V-fO-0by" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="-1611"/>
+            <point key="canvasLocation" x="31" y="-1712"/>
         </scene>
         <!--SonecaBuss-->
         <scene sceneID="97L-Rp-HW0">
@@ -70,16 +70,16 @@
                                                         <constraint firstAttribute="width" constant="107" id="GO7-DK-OPb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-2u-4yv">
-                                                    <rect key="frame" x="127" y="17" width="390" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfe-2u-4yv">
+                                                    <rect key="frame" x="127" y="12" width="440" height="82"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="390" id="CNr-th-qdS"/>
+                                                        <constraint firstAttribute="width" constant="440" id="CNr-th-qdS"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xx-Yt-278">
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repetir:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xx-Yt-278">
                                                     <rect key="frame" x="127" y="77" width="57" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="Fk5-7j-H5r"/>
@@ -89,7 +89,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nunca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-4c-bW3">
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nunca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dG-4c-bW3">
                                                     <rect key="frame" x="185" y="77" width="42" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="Ngq-0a-QrY"/>
@@ -98,24 +98,31 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-wQ-kKB">
-                                                    <rect key="frame" x="534" y="38" width="51" height="31"/>
+                                                <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-wQ-kKB">
+                                                    <rect key="frame" x="127" y="68" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NgN-Xs-9zv" firstAttribute="leading" secondItem="68T-Wy-wtT" secondAttribute="leadingMargin" constant="-8" id="3qg-G6-qrY"/>
-                                                <constraint firstItem="KBn-wQ-kKB" firstAttribute="top" secondItem="68T-Wy-wtT" secondAttribute="topMargin" constant="30" id="47l-ky-SHG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qfe-2u-4yv" secondAttribute="trailing" constant="25" id="9a6-n7-yf5"/>
                                                 <constraint firstItem="NgN-Xs-9zv" firstAttribute="top" secondItem="68T-Wy-wtT" secondAttribute="topMargin" constant="-8" id="A8y-3Q-bvB"/>
-                                                <constraint firstItem="qfe-2u-4yv" firstAttribute="top" secondItem="68T-Wy-wtT" secondAttribute="topMargin" constant="9" id="MYJ-45-Pr0"/>
+                                                <constraint firstItem="KBn-wQ-kKB" firstAttribute="leading" secondItem="NgN-Xs-9zv" secondAttribute="trailing" constant="20" id="KkI-RE-qYf"/>
+                                                <constraint firstItem="qfe-2u-4yv" firstAttribute="top" secondItem="68T-Wy-wtT" secondAttribute="topMargin" constant="4" id="MYJ-45-Pr0"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="0dG-4c-bW3" secondAttribute="bottom" constant="5.5" id="NBO-oV-9dc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qfe-2u-4yv" secondAttribute="bottom" constant="5.5" id="Rnd-PN-407"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="2Xx-Yt-278" secondAttribute="bottom" constant="5.5" id="S3Y-Zu-m3e"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="KBn-wQ-kKB" secondAttribute="bottom" constant="30.5" id="VJY-QB-QUq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KBn-wQ-kKB" secondAttribute="bottom" constant="0.5" id="XBb-u0-Ci4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NgN-Xs-9zv" secondAttribute="bottom" constant="-7.5" id="ZV4-ao-fP8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="KBn-wQ-kKB" secondAttribute="trailing" constant="9" id="hf5-80-ac0"/>
                                                 <constraint firstItem="0dG-4c-bW3" firstAttribute="leading" secondItem="2Xx-Yt-278" secondAttribute="trailing" constant="1" id="lMP-Mg-kKW"/>
                                                 <constraint firstItem="qfe-2u-4yv" firstAttribute="leading" secondItem="NgN-Xs-9zv" secondAttribute="trailing" constant="20" id="pfR-Ot-OPb"/>
                                                 <constraint firstItem="2Xx-Yt-278" firstAttribute="leading" secondItem="NgN-Xs-9zv" secondAttribute="trailing" constant="20" id="xeG-b7-764"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="VJY-QB-QUq"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="frequencyLabel" destination="0dG-4c-bW3" id="V0H-al-7Cd"/>

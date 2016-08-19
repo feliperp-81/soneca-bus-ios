@@ -13,7 +13,6 @@
 		4AAD7A611D67583E00ECFA20 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD7A601D67583E00ECFA20 /* Utilities.swift */; };
 		4AAD7A631D6759D800ECFA20 /* GeoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */; };
 		4AC3E52A1D6754E10033881B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC3E5291D6754E10033881B /* Info.plist */; };
-		4AC3E52C1D67556C0033881B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC3E52B1D67556C0033881B /* Assets.xcassets */; };
 		4AE2F2981D6751D3004E0F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE2F2971D6751D3004E0F52 /* AppDelegate.swift */; };
 		4AE2F2A11D67521F004E0F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2F29D1D67521F004E0F52 /* LaunchScreen.storyboard */; };
 		4AE2F2A21D67521F004E0F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2F29F1D67521F004E0F52 /* Main.storyboard */; };
@@ -23,6 +22,7 @@
 		69838F3B1D67799300DBB8CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69838F3A1D67799300DBB8CF /* MapKit.framework */; };
 		69C0FB0E1D679D5E00FCD7EE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0FB0D1D679D5E00FCD7EE /* SearchViewController.swift */; };
 		69C0FB101D67A7F500FCD7EE /* AlertDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0FB0F1D67A7F500FCD7EE /* AlertDetailsViewController.swift */; };
+		69C0FB121D67AA6F00FCD7EE /* AssetCatalog.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C0FB111D67AA6F00FCD7EE /* AssetCatalog.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		4AAD7A601D67583E00ECFA20 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = SOURCE_ROOT; };
 		4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoNotification.swift; sourceTree = SOURCE_ROOT; };
 		4AC3E5291D6754E10033881B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		4AC3E52B1D67556C0033881B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		4AE2F2971D6751D3004E0F52 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		4AE2F29E1D67521F004E0F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		4AE2F2A01D67521F004E0F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -44,6 +43,7 @@
 		69838F3A1D67799300DBB8CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		69C0FB0D1D679D5E00FCD7EE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		69C0FB0F1D67A7F500FCD7EE /* AlertDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDetailsViewController.swift; sourceTree = SOURCE_ROOT; };
+		69C0FB111D67AA6F00FCD7EE /* AssetCatalog.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetCatalog.xcassets; sourceTree = SOURCE_ROOT; };
 		7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soneca_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,13 +97,13 @@
 				69838F361D67627100DBB8CF /* HomeTableViewCell.swift */,
 				4AE2F29D1D67521F004E0F52 /* LaunchScreen.storyboard */,
 				4AE2F29F1D67521F004E0F52 /* Main.storyboard */,
-				4AC3E52B1D67556C0033881B /* Assets.xcassets */,
 				4AAD7A601D67583E00ECFA20 /* Utilities.swift */,
 				4AAD7A621D6759D800ECFA20 /* GeoNotification.swift */,
 				4A6516B71D67843300DC18FA /* BusStop.swift */,
 				4A7A50371D679BF000358F8E /* BusStopAnnotation.swift */,
 				69C0FB0D1D679D5E00FCD7EE /* SearchViewController.swift */,
 				69C0FB0F1D67A7F500FCD7EE /* AlertDetailsViewController.swift */,
+				69C0FB111D67AA6F00FCD7EE /* AssetCatalog.xcassets */,
 			);
 			path = "Soneca-Bus";
 			sourceTree = "<group>";
@@ -183,9 +183,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C0FB121D67AA6F00FCD7EE /* AssetCatalog.xcassets in Resources */,
 				4AE2F2A11D67521F004E0F52 /* LaunchScreen.storyboard in Resources */,
 				4AE2F2A21D67521F004E0F52 /* Main.storyboard in Resources */,
-				4AC3E52C1D67556C0033881B /* Assets.xcassets in Resources */,
 				4AC3E52A1D6754E10033881B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +367,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E8C0DAE06580C4031A1CEF /* Pods-Soneca-Bus.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -380,6 +382,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
