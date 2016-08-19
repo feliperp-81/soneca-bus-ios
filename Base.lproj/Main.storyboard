@@ -22,6 +22,24 @@
             </objects>
             <point key="canvasLocation" x="-586" y="-857"/>
         </scene>
+        <!--Alert Details View Controller-->
+        <scene sceneID="zJX-fX-dJT">
+            <objects>
+                <viewController id="ejy-nv-s5G" customClass="AlertDetailsViewController" customModule="Soneca_Bus" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pT7-Ql-X5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="af1-J2-hTZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1lI-Vz-gWk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8V-fO-0by" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="-1611"/>
+        </scene>
         <!--SonecaBuss-->
         <scene sceneID="97L-Rp-HW0">
             <objects>
@@ -103,6 +121,7 @@
                                             <outlet property="frequencyLabel" destination="0dG-4c-bW3" id="V0H-al-7Cd"/>
                                             <outlet property="mapImageView" destination="NgN-Xs-9zv" id="jpv-mC-pJu"/>
                                             <outlet property="streetLabel" destination="qfe-2u-4yv" id="1Ln-yM-0jN"/>
+                                            <segue destination="ejy-nv-s5G" kind="show" id="xHV-sa-0vA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

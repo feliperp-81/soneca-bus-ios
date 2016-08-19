@@ -63,8 +63,50 @@ class HomeViewController: UIViewController,
 		let geonotification = getGeonotifications()[indexPath.row]
 
 		cell.streetLabel.text = geonotification.note
+		setImage(geonotification.coordinate, completion: { image in
+			cell.mapImageView.image = image
+		})
 
 		return cell
+	}
+
+	func setImage(coordinate: CLLocationCoordinate2D, completion: (UIImage) -> ()) {
+		let options = MKMapSnapshotOptions()
+		options.size = CGSizeMake(107, 107)
+		options.scale = UIScreen.mainScreen().scale
+		options.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000)
+
+		let snapshotter = MKMapSnapshotter(options: options)
+
+		snapshotter.startWithQueue(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { snapshot, error in
+			guard let snapshot = snapshot else {
+				print("Snapshot error: \(error)")
+				fatalError()
+			}
+
+			let pin = MKPinAnnotationView(annotation: nil, reuseIdentifier: nil)
+			let pinImage = pin.image
+
+			let image = snapshot.image
+
+			UIGraphicsBeginImageContextWithOptions(image.size, true, image.scale)
+			image.drawAtPoint(CGPoint.zero)
+
+			var point = snapshot.pointForCoordinate(coordinate)
+			let pinCenterOffset = pin.centerOffset
+
+			point.x -= pin.bounds.size.width / 2.0
+			point.y -= pin.bounds.size.width / 2.0
+			point.x += pinCenterOffset.x
+			point.y += pinCenterOffset.y
+
+			pinImage?.drawAtPoint(CGPointMake(image.size.width/2, image.size.height/2))
+
+			let compositeImage = UIGraphicsGetImageFromCurrentImageContext()
+			UIGraphicsEndImageContext()
+
+			completion(compositeImage)
+		}
 	}
 
 	private let _cellID = "HomeTableViewCell"
