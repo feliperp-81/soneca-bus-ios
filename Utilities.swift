@@ -14,6 +14,7 @@ func showSimpleAlertWithTitle(
 	let alert = UIAlertController(
 		title: title, message: message, preferredStyle: .Alert)
 
+//	"Sua parada está próxima, hora de acordar!!"
 	let action = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
 	alert.addAction(action)
 	

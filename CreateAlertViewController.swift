@@ -47,15 +47,17 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 //		busStops.removeAll()
 //		mapView.removeAnnotations(mapView.annotations)
 
-		let header: [String : String] = ["host": "api.soneca.wedeploy.me"]
+//		let header: [String : String] = ["host": "api.soneca.wedeploy.me"]
 		var parameters = [String: AnyObject]()
 
 		parameters["lat"] = Double(mapView.centerCoordinate.latitude)
 		parameters["lon"] = Double(mapView.centerCoordinate.longitude)
 
+//		http://api.soneca.wedeploy.io/paradas
+
 		Alamofire.request(
-			.GET, "http://192.168.109.163/paradas", parameters: parameters,
-			headers: header).responseJSON { response in
+			.GET, "http://api.soneca.wedeploy.io/paradas", parameters: parameters,
+			headers: nil).responseJSON { response in
 
 			let items = response.result.value as! [AnyObject]
 			for item in items {

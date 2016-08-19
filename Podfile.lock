@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (3.4.1)
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
   - later (0.1.0)
   - Launchpad (0.3.0):
     - later (= 0.1.0)
@@ -8,14 +13,16 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GoogleMaps
   - Launchpad
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
   later: 956bed82bd77304be303a41b76909e47aa2881f9
   Launchpad: c7f5d7aa6b19ad524143ae2a7c2a502c1b51c388
   Socket.IO-Client-Swift: 5e8aa2961d1f32e5c0e104c00c9f192133a92d11
 
-PODFILE CHECKSUM: b3d3dbd45be8665f1b96c066218b2da7d8512f73
+PODFILE CHECKSUM: 5c1f0cb8d786bdf99bf5d3c168d62eb7a0b8ee13
 
 COCOAPODS: 1.0.1

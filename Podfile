@@ -8,5 +8,6 @@ target 'Soneca-Bus' do
   # Pods for Soneca-Bus
   pod 'Launchpad'
   pod 'Alamofire'
-
+  pod 'GoogleMaps'
+  
 end
