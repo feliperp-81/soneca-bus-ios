@@ -1,0 +1,6 @@
+framework module Pods_Soneca_Bus {
+  umbrella header "Pods-Soneca-Bus-umbrella.h"
+
+  export *
+  module * { export * }
+}

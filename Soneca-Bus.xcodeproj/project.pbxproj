@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052EA3F776612D8F0A0BBAE3 /* Pods_Soneca_Bus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */; };
 		4A582CD31D674DE500F7A6D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A582CD21D674DE500F7A6D3 /* AppDelegate.swift */; };
 		4A582CD51D674DE500F7A6D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A582CD41D674DE500F7A6D3 /* ViewController.swift */; };
 		4A582CD81D674DE500F7A6D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A582CD61D674DE500F7A6D3 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32E8C0DAE06580C4031A1CEF /* Pods-Soneca-Bus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soneca-Bus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus.debug.xcconfig"; sourceTree = "<group>"; };
 		4A582CCF1D674DE500F7A6D3 /* Soneca-Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Soneca-Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A582CD21D674DE500F7A6D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A582CD41D674DE500F7A6D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		4A582CD91D674DE500F7A6D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A582CDC1D674DE500F7A6D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A582CDE1D674DE500F7A6D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soneca-Bus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus.release.xcconfig"; sourceTree = "<group>"; };
+		7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soneca_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052EA3F776612D8F0A0BBAE3 /* Pods_Soneca_Bus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		199A8A3DD634AC2F4CE2BFED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32E8C0DAE06580C4031A1CEF /* Pods-Soneca-Bus.debug.xcconfig */,
+				5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4A582CC61D674DE500F7A6D3 = {
 			isa = PBXGroup;
 			children = (
 				4A582CD11D674DE500F7A6D3 /* Soneca-Bus */,
 				4A582CD01D674DE500F7A6D3 /* Products */,
+				199A8A3DD634AC2F4CE2BFED /* Pods */,
+				C5D91ADC5F023F4D05819FAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "Soneca-Bus";
 			sourceTree = "<group>";
 		};
+		C5D91ADC5F023F4D05819FAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A582CE11D674DE500F7A6D3 /* Build configuration list for PBXNativeTarget "Soneca-Bus" */;
 			buildPhases = (
+				B91192608E839B049D370D8D /* [CP] Check Pods Manifest.lock */,
 				4A582CCB1D674DE500F7A6D3 /* Sources */,
 				4A582CCC1D674DE500F7A6D3 /* Frameworks */,
 				4A582CCD1D674DE500F7A6D3 /* Resources */,
+				F0F816BA0CAD19760F03E892 /* [CP] Embed Pods Frameworks */,
+				4597A52672A8309E23345A5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4597A52672A8309E23345A5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B91192608E839B049D370D8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0F816BA0CAD19760F03E892 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A582CCB1D674DE500F7A6D3 /* Sources */ = {
@@ -247,6 +322,7 @@
 		};
 		4A582CE21D674DE500F7A6D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E8C0DAE06580C4031A1CEF /* Pods-Soneca-Bus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Soneca-Bus/Info.plist";
@@ -258,6 +334,7 @@
 		};
 		4A582CE31D674DE500F7A6D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Soneca-Bus/Info.plist";
@@ -286,6 +363,7 @@
 				4A582CE31D674DE500F7A6D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
