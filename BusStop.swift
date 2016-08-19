@@ -7,5 +7,16 @@
 //
 
 public class BusStop {
-//	let id:
+
+	var id: String
+	var lat: Double
+	var lon: Double
+	var rua: String
+
+	init(id: String, lat: Double, lon: Double, rua: String) {
+		self.id = id
+		self.lat = lat
+		self.lon = lon
+		self.rua = rua
+	}
 }
