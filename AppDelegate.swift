@@ -112,6 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,
 
 	func addGeonotification(geonotification: GeoNotification) {
 		geonotifications.append(geonotification)
+
+		saveAllGeotifications(geonotifications)
 	}
 
 }
