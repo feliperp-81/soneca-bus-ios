@@ -15,6 +15,8 @@
 		4AE2F2A21D67521F004E0F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE2F29F1D67521F004E0F52 /* Main.storyboard */; };
 		69838F351D675A0900DBB8CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69838F341D675A0900DBB8CF /* HomeViewController.swift */; };
 		69838F371D67627100DBB8CF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69838F361D67627100DBB8CF /* HomeTableViewCell.swift */; };
+		69838F391D6777CE00DBB8CF /* CreateAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69838F381D6777CE00DBB8CF /* CreateAlertViewController.swift */; };
+		69838F3B1D67799300DBB8CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69838F3A1D67799300DBB8CF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5A53A382D748D5CE7BEE5883 /* Pods-Soneca-Bus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soneca-Bus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soneca-Bus/Pods-Soneca-Bus.release.xcconfig"; sourceTree = "<group>"; };
 		69838F341D675A0900DBB8CF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		69838F361D67627100DBB8CF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		69838F381D6777CE00DBB8CF /* CreateAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAlertViewController.swift; sourceTree = SOURCE_ROOT; };
+		69838F3A1D67799300DBB8CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soneca_Bus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69838F3B1D67799300DBB8CF /* MapKit.framework in Frameworks */,
 				052EA3F776612D8F0A0BBAE3 /* Pods_Soneca_Bus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +80,7 @@
 			children = (
 				4AC3E5291D6754E10033881B /* Info.plist */,
 				4AE2F2971D6751D3004E0F52 /* AppDelegate.swift */,
+				69838F381D6777CE00DBB8CF /* CreateAlertViewController.swift */,
 				69838F341D675A0900DBB8CF /* HomeViewController.swift */,
 				69838F361D67627100DBB8CF /* HomeTableViewCell.swift */,
 				4AE2F29D1D67521F004E0F52 /* LaunchScreen.storyboard */,
@@ -87,6 +93,7 @@
 		C5D91ADC5F023F4D05819FAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				69838F3A1D67799300DBB8CF /* MapKit.framework */,
 				7A242DC485FD5E461BE88BF4 /* Pods_Soneca_Bus.framework */,
 			);
 			name = Frameworks;
@@ -127,6 +134,11 @@
 				TargetAttributes = {
 					4A582CCE1D674DE500F7A6D3 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -216,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69838F371D67627100DBB8CF /* HomeTableViewCell.swift in Sources */,
+				69838F391D6777CE00DBB8CF /* CreateAlertViewController.swift in Sources */,
 				69838F351D675A0900DBB8CF /* HomeViewController.swift in Sources */,
 				4AE2F2981D6751D3004E0F52 /* AppDelegate.swift in Sources */,
 			);
