@@ -98,7 +98,7 @@ class HomeViewController: UIViewController,
 		let options = MKMapSnapshotOptions()
 		options.size = CGSizeMake(107, 107)
 		options.scale = UIScreen.mainScreen().scale
-		options.region = MKCoordinateRegionMakeWithDistance(coordinate, 2000, 2000)
+		options.region = MKCoordinateRegionMakeWithDistance(coordinate, 900, 900)
 
 		let snapshotter = MKMapSnapshotter(options: options)
 

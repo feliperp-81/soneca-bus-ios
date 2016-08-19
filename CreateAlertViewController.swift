@@ -128,8 +128,11 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 			annotation: annotation, reuseIdentifier: nil)
 
 		anView.canShowCallout = true
-			
 
+		let button = UIButton(type: .ContactAdd)
+		button.addTarget(self, action: #selector(cancelButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+		anView.rightCalloutAccessoryView = button
+			
 		return anView
 	}
 
