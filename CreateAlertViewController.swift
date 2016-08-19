@@ -24,19 +24,6 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 
 //		searchContainerView.addSubview(_searchController!.searchBar)
 
-		if let location = getLocatioManager().location?.coordinate {
-			mapView.centerCoordinate = location
-			mapView.zoomEnabled = true
-
-			let camera = MKMapCamera(
-				lookingAtCenterCoordinate: location, fromDistance: 0, pitch: 0,
-				heading: 0)
-
-			mapView.setCamera(camera, animated: true)
-		}
-
-		mapView.delegate = self
-		getPoints()
     }
 
 	func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -95,15 +82,28 @@ class CreateAlertViewController: UIViewController, MKMapViewDelegate {
 	}
 
 	override func viewWillAppear(animated: Bool) {
+	}
+
+	override func viewDidAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 
-		guard let searchController = _searchController else {
-			return
+		if let location = getLocatioManager().location?.coordinate {
+			mapView.centerCoordinate = location
+			mapView.zoomEnabled = true
+
+			let span = MKCoordinateSpanMake(0.012, 0.012)
+			let region = MKCoordinateRegion(center: location, span: span)
+			mapView.setRegion(region, animated: true)
+
+			//			let camera = MKMapCamera(
+			//				lookingAtCenterCoordinate: location, fromDistance: 0, pitch: 0,
+			//				heading: 0)
+			//
+			//			mapView.setCamera(camera, animated: true)
 		}
 
-		var frame = searchController.searchBar.bounds
-		frame.size.width = self.view.bounds.size.width
-		searchController.searchBar.frame = frame
+		mapView.delegate = self
+		getPoints()
 	}
 
     override func didReceiveMemoryWarning() {
